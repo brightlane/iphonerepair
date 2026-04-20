@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElevenLabs AI Voice Generator — Most Realistic Text to Speech | Try Free</title>
+<meta name="description" content="ElevenLabs creates the most realistic AI voices on the planet. Clone your voice, generate lifelike speech in 32 languages, and bring your content to life. Used by 1M+ creators. Start free today.">
+<meta name="keywords" content="ElevenLabs, AI voice generator, text to speech, realistic AI voice, voice cloning, AI voiceover, text to speech online, best AI voice generator, ElevenLabs free, voice synthesis AI, multilingual TTS, AI dubbing, podcast AI voice, audiobook AI voice, ElevenLabs review, ElevenLabs alternative">
+<meta property="og:title" content="ElevenLabs — The Most Realistic AI Voice Generator on Earth">
+<meta property="og:description" content="Generate lifelike AI voices in 32 languages. Clone your voice. Create studio-quality audio in seconds. Free plan available.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://try.elevenlabs.io/l2qbqh1bg1mw">
+<meta property="og:image" content="https://try.elevenlabs.io/l2qbqh1bg1mw">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ElevenLabs — Hyper-Realistic AI Voices">
+<meta name="twitter:description" content="The world's most realistic AI voice generator. 32 languages. Voice cloning. Free to start.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="author" content="PalmariniServices">
+<link rel="canonical" href="https://try.elevenlabs.io/l2qbqh1bg1mw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured Data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ElevenLabs",
+  "description": "The most realistic AI voice generator. Convert text to speech in 32 languages with voice cloning technology.",
+  "applicationCategory": "MultimediaApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free plan available"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "12400"
+  },
+  "url": "https://try.elevenlabs.io/l2qbqh1bg1mw"
+}
+</script>
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --el-bg: #050507;
+  --el-surface: #0C0C12;
+  --el-card: #11111A;
+  --el-border: rgba(255,255,255,0.07);
+  --el-border-glow: rgba(255,255,255,0.13);
+  --el-text: #F0EEF8;
+  --el-muted: #7A778F;
+  --el-accent: #FF6B35;
+  --el-gold: #F5C842;
+  --el-purple: #8B5CF6;
+  --el-teal: #06D6A0;
+  --el-wave: #FF6B35;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--el-bg);
+  color: var(--el-text);
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── CURSOR ── */
+.cursor {
+  width: 10px; height: 10px;
+  background: var(--el-accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, opacity 0.2s;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 38px; height: 38px;
+  border: 1px solid rgba(255,107,53,0.4);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.35s ease, width 0.2s, height 0.2s;
+  transform: translate(-50%, -50%);
+}
+
+/* ── SOUND WAVE ANIMATION ── */
+@keyframes wave1 { 0%,100%{height:8px} 50%{height:40px} }
+@keyframes wave2 { 0%,100%{height:20px} 50%{height:8px} }
+@keyframes wave3 { 0%,100%{height:32px} 30%{height:8px} 70%{height:48px} }
+@keyframes wave4 { 0%,100%{height:14px} 40%{height:52px} }
+@keyframes wave5 { 0%,100%{height:44px} 50%{height:10px} }
+@keyframes wave6 { 0%,100%{height:10px} 60%{height:36px} }
+@keyframes wave7 { 0%,100%{height:28px} 50%{height:6px} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
+@keyframes scaleIn { from{opacity:0;transform:scale(0.9)} to{opacity:1;transform:scale(1)} }
+@keyframes shimmer { from{background-position:-400px 0} to{background-position:400px 0} }
+@keyframes float { 0%,100%{transform:translateY(0px)} 50%{transform:translateY(-12px)} }
+@keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes glowPulse { 0%,100%{opacity:0.4} 50%{opacity:0.8} }
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 64px;
+}
+.wave-bar {
+  width: 4px;
+  background: var(--el-accent);
+  border-radius: 2px;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.wave-bar:nth-child(1){animation-name:wave1;animation-delay:0s;opacity:0.5}
+.wave-bar:nth-child(2){animation-name:wave2;animation-delay:0.1s;opacity:0.7}
+.wave-bar:nth-child(3){animation-name:wave3;animation-delay:0.2s;opacity:0.9}
+.wave-bar:nth-child(4){animation-name:wave4;animation-delay:0.05s}
+.wave-bar:nth-child(5){animation-name:wave5;animation-delay:0.15s}
+.wave-bar:nth-child(6){animation-name:wave6;animation-delay:0.25s;opacity:0.9}
+.wave-bar:nth-child(7){animation-name:wave1;animation-delay:0.3s;opacity:0.8}
+.wave-bar:nth-child(8){animation-name:wave3;animation-delay:0.08s}
+.wave-bar:nth-child(9){animation-name:wave2;animation-delay:0.18s;opacity:0.7}
+.wave-bar:nth-child(10){animation-name:wave5;animation-delay:0.12s}
+.wave-bar:nth-child(11){animation-name:wave4;animation-delay:0.22s;opacity:0.8}
+.wave-bar:nth-child(12){animation-name:wave6;animation-delay:0.04s;opacity:0.6}
+.wave-bar:nth-child(13){animation-name:wave3;animation-delay:0.28s}
+.wave-bar:nth-child(14){animation-name:wave1;animation-delay:0.16s;opacity:0.75}
+.wave-bar:nth-child(15){animation-name:wave7;animation-delay:0.06s;opacity:0.5}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  background: rgba(5,5,7,0.8);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--el-border);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-logo-dot {
+  width: 8px; height: 8px;
+  background: var(--el-accent);
+  border-radius: 50%;
+  animation: glowPulse 2s infinite;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 14px;
+  color: var(--el-muted);
+  transition: color 0.2s;
+  font-weight: 400;
+}
+.nav-links a:hover { color: var(--el-text); }
+.nav-cta {
+  background: var(--el-accent);
+  color: #fff !important;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.nav-cta:hover { background: #e55a26; transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 5vw 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: glowPulse 4s infinite;
+}
+.orb-1 {
+  width: 600px; height: 600px;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(255,107,53,0.08) 0%, transparent 70%);
+}
+.orb-2 {
+  width: 400px; height: 400px;
+  bottom: -100px; right: -100px;
+  background: radial-gradient(circle, rgba(139,92,246,0.06) 0%, transparent 70%);
+}
+.orb-3 {
+  width: 300px; height: 300px;
+  bottom: 100px; left: -50px;
+  background: radial-gradient(circle, rgba(6,214,160,0.05) 0%, transparent 70%);
+}
+
+/* Grid lines background */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,107,53,0.08);
+  border: 1px solid rgba(255,107,53,0.2);
+  color: var(--el-accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 100px;
+  margin-bottom: 36px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  color: #fff;
+  max-width: 1000px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+.hero h1 .accent { color: var(--el-accent); }
+.hero h1 .italic { font-style: italic; }
+
+.hero-sub {
+  font-size: clamp(17px, 2vw, 21px);
+  color: var(--el-muted);
+  max-width: 580px;
+  margin: 0 auto 52px;
+  font-weight: 300;
+  line-height: 1.7;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.hero-wave {
+  margin-bottom: 48px;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.cta-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: fadeUp 0.8s 0.45s ease both;
+}
+.btn-xl {
+  background: var(--el-accent);
+  color: #fff;
+  padding: 20px 52px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.25s;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: -0.2px;
+}
+.btn-xl::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.btn-xl:hover { background: #e55a26; transform: translateY(-2px); box-shadow: 0 16px 40px rgba(255,107,53,0.3); }
+
+.cta-note {
+  font-size: 13px;
+  color: var(--el-muted);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cta-note span { display: flex; align-items: center; gap: 6px; }
+.cta-note .dot { width: 4px; height: 4px; background: var(--el-border-glow); border-radius: 50%; }
+
+.hero-trust {
+  margin-top: 72px;
+  animation: fadeUp 0.8s 0.55s ease both;
+  position: relative;
+  z-index: 1;
+}
+.trust-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--el-muted);
+  margin-bottom: 20px;
+}
+.trust-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-logo {
+  background: var(--el-card);
+  border: 1px solid var(--el-border);
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--el-muted);
+  white-space: nowrap;
+}
+
+/* ── SECTIONS COMMON ── */
+.section { padding: 100px 5vw; }
+.section-inner { max-width: 1160px; margin: 0 auto; }
+.section-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--el-accent);
+  margin-bottom: 14px;
+}
+.section-h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(30px, 4.5vw, 54px);
+  letter-spacing: -1.5px;
+  line-height: 1.08;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.section-h2 em { font-style: italic; color: var(--el-accent); }
+.section-lead {
+  font-size: 17px;
+  color: var(--el-muted);
+  max-width: 560px;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 56px;
+}
+
+/* ── STATS STRIP ── */
+.stats-strip {
+  background: var(--el-surface);
+  border-top: 1px solid var(--el-border);
+  border-bottom: 1px solid var(--el-border);
+  padding: 48px 5vw;
+}
+.stats-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-num .accent { color: var(--el-accent); }
+.stat-label { font-size: 13px; color: var(--el-muted); line-height: 1.4; }
+
+/* ── FEATURE CARDS ── */
+.feat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+.feat-card {
+  background: var(--el-card);
+  border: 1px solid var(--el-border);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.feat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,107,53,0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.feat-card:hover { border-color: var(--el-border-glow); transform: translateY(-3px); }
+.feat-card:hover::before { opacity: 1; }
+.feat-icon-wrap {
+  width: 52px; height: 52px;
+  background: rgba(255,107,53,0.1);
+  border: 1px solid rgba(255,107,53,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.feat-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.feat-card p { font-size: 14px; color: var(--el-muted); line-height: 1.7; }
+.feat-tag {
+  display: inline-block;
+  background: rgba(6,214,160,0.1);
+  border: 1px solid rgba(6,214,160,0.2);
+  color: var(--el-teal);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-top: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* ── USE CASES ── */
+.use-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.use-card {
+  background: var(--el-card);
+  border: 1px solid var(--el-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  transition: all 0.25s;
+  cursor: default;
+}
+.use-card:hover { border-color: var(--el-border-glow); background: #14141E; }
+.use-card-icon { font-size: 26px; margin-bottom: 12px; }
+.use-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 7px;
+}
+.use-card p { font-size: 13px; color: var(--el-muted); line-height: 1.6; }
+
+/* ── LANGUAGE GLOBE ── */
+.lang-section { background: var(--el-surface); }
+.lang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.lang-visual {
+  position: relative;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lang-circle {
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  border: 1px solid var(--el-border);
+  position: relative;
+  animation: float 5s ease-in-out infinite;
+}
+.lang-inner {
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,107,53,0.2);
+  background: rgba(255,107,53,0.05);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lang-core {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: var(--el-accent);
+  text-align: center;
+  line-height: 1.1;
+}
+.lang-badge {
+  position: absolute;
+  background: var(--el-card);
+  border: 1px solid var(--el-border);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--el-text);
+  white-space: nowrap;
+}
+.lang-badge:nth-child(1) { top: 20px; left: 50%; transform: translateX(-50%); }
+.lang-badge:nth-child(2) { top: 30%; right: -20px; }
+.lang-badge:nth-child(3) { bottom: 20px; right: 30px; }
+.lang-badge:nth-child(4) { bottom: 30%; left: -20px; }
+.lang-badge:nth-child(5) { top: 30%; left: -10px; }
+.lang-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.lang-pill {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--el-border);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 12px;
+  color: var(--el-muted);
+  transition: all 0.2s;
+}
+.lang-pill:hover { border-color: var(--el-border-glow); color: var(--el-text); }
+
+/* ── TESTIMONIALS ── */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.testi-card {
+  background: var(--el-card);
+  border: 1px solid var(--el-border);
+  border-radius: 14px;
+  padding: 28px;
+}
+.testi-stars { color: var(--el-gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+.testi-quote {
+  font-size: 15px;
+  color: var(--el-text);
+  line-height: 1.75;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px; color: #fff;
+  flex-shrink: 0;
+}
+.av-orange { background: linear-gradient(135deg, #FF6B35, #FF4500); }
+.av-purple { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
+.av-teal { background: linear-gradient(135deg, #06D6A0, #0891B2); }
+.av-gold { background: linear-gradient(135deg, #F5C842, #F59E0B); }
+.testi-name { font-size: 14px; font-weight: 600; color: #fff; }
+.testi-role { font-size: 12px; color: var(--el-muted); }
+
+/* ── PRICING ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 56px;
+}
+.price-card {
+  background: var(--el-card);
+  border: 1px solid var(--el-border);
+  border-radius: 16px;
+  padding: 36px 28px;
+  position: relative;
+  text-align: left;
+}
+.price-card.featured {
+  border-color: rgba(255,107,53,0.4);
+  background: linear-gradient(145deg, rgba(255,107,53,0.06), var(--el-card));
+}
+.price-popular {
+  position: absolute;
+  top: -13px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--el-accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 18px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.price-tier {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--el-muted);
+  margin-bottom: 14px;
+}
+.price-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+.price-period { font-size: 13px; color: var(--el-muted); margin-bottom: 26px; margin-top: 5px; }
+.price-divider { height: 1px; background: var(--el-border); margin-bottom: 22px; }
+.price-feats { list-style: none; margin-bottom: 28px; }
+.price-feats li {
+  font-size: 14px;
+  color: var(--el-muted);
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.price-feats li:last-child { border: none; }
+.pcheck {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(6,214,160,0.12);
+  color: var(--el-teal);
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.price-btn {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--el-border);
+  color: var(--el-text);
+}
+.price-btn:hover { background: rgba(255,255,255,0.1); }
+.price-btn.orange { background: var(--el-accent); border-color: var(--el-accent); color: #fff; }
+.price-btn.orange:hover { background: #e55a26; box-shadow: 0 8px 24px rgba(255,107,53,0.25); }
+
+/* ── FAQ ── */
+.faq-list { max-width: 760px; }
+.faq-item {
+  border-bottom: 1px solid var(--el-border);
+  padding: 24px 0;
+}
+.faq-q {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  user-select: none;
+}
+.faq-toggle {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--el-surface);
+  border: 1px solid var(--el-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  color: var(--el-accent);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.faq-a {
+  font-size: 15px;
+  color: var(--el-muted);
+  line-height: 1.75;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  padding-top: 0;
+}
+.faq-item.open .faq-a { max-height: 300px; padding-top: 14px; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+/* ── FINAL CTA ── */
+.final-cta {
+  padding: 140px 5vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-glow-1 {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 500px;
+  background: radial-gradient(ellipse, rgba(255,107,53,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-glow-2 {
+  position: absolute;
+  top: 30%; left: 20%;
+  width: 400px; height: 400px;
+  background: radial-gradient(ellipse, rgba(139,92,246,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 72px);
+  letter-spacing: -2px;
+  line-height: 1.05;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.final-cta h2 em { font-style: italic; color: var(--el-accent); }
+.final-cta p {
+  font-size: 18px;
+  color: var(--el-muted);
+  max-width: 500px;
+  margin: 0 auto 48px;
+  position: relative;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.final-btn-group { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; position: relative; }
+.btn-secondary-lg {
+  padding: 18px 36px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--el-border);
+  color: var(--el-text);
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-secondary-lg:hover { background: rgba(255,255,255,0.1); border-color: var(--el-border-glow); }
+.affiliate-disc {
+  margin-top: 32px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.18);
+  position: relative;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--el-surface);
+  border-top: 1px solid var(--el-border);
+  padding: 52px 5vw 36px;
+}
+.footer-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.footer-brand-dot {
+  width: 8px; height: 8px;
+  background: var(--el-accent);
+  border-radius: 50%;
+}
+.footer-desc { font-size: 13px; color: var(--el-muted); line-height: 1.7; max-width: 240px; }
+.footer-col h5 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--el-muted);
+  margin-bottom: 18px;
+}
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: var(--el-muted);
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--el-text); }
+.footer-bottom {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--el-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
+.footer-affiliate { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .lang-grid { grid-template-columns: 1fr; }
+  .lang-visual { display: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .final-btn-group { flex-direction: column; align-items: stretch; max-width: 300px; margin-left: auto; margin-right: auto; }
+  .btn-xl, .btn-secondary-lg { text-align: center; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .hero h1 { letter-spacing: -1px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-dot"></div>
+    ElevenLabs
+  </div>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#languages">Languages</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="nav-cta" target="_blank" rel="noopener">Try Free →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+
+  <div class="hero-eyebrow">
+    ◆ &nbsp;The World's Most Advanced AI Voice Platform
+  </div>
+
+  <h1>
+    Your Voice,<br>
+    <span class="italic accent">Reimagined</span><br>
+    by AI
+  </h1>
+
+  <p class="hero-sub">
+    Generate hyper-realistic AI speech in 32 languages. Clone any voice. Create studio-quality audio in seconds — no microphone needed.
+  </p>
+
+  <div class="hero-wave">
+    <div class="waveform" style="justify-content:center">
+      <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+      <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+      <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+      <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+      <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+    </div>
+  </div>
+
+  <div class="cta-stack">
+    <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="btn-xl" target="_blank" rel="noopener">
+      Generate Your First Voice Free →
+    </a>
+    <div class="cta-note">
+      <span>✓ Free forever plan</span>
+      <span class="dot"></span>
+      <span>✓ No credit card</span>
+      <span class="dot"></span>
+      <span>✓ Instant access</span>
+      <span class="dot"></span>
+      <span>✓ 32 languages</span>
+    </div>
+  </div>
+
+  <div class="hero-trust">
+    <p class="trust-label">Trusted by creators at</p>
+    <div class="trust-logos">
+      <div class="trust-logo">Netflix</div>
+      <div class="trust-logo">HubSpot</div>
+      <div class="trust-logo">Duolingo</div>
+      <div class="trust-logo">The Washington Post</div>
+      <div class="trust-logo">Spotify</div>
+      <div class="trust-logo">BBC</div>
+      <div class="trust-logo">1M+ Creators</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">1<span class="accent">M</span>+</div>
+      <div class="stat-label">Active creators &amp; businesses worldwide</div>
+    </div>
+    <div>
+      <div class="stat-num">32</div>
+      <div class="stat-label">Languages supported with native-quality output</div>
+    </div>
+    <div>
+      <div class="stat-num">1<span class="accent">K</span>+</div>
+      <div class="stat-label">Unique AI voices available instantly</div>
+    </div>
+    <div>
+      <div class="stat-num">99<span class="accent">%</span></div>
+      <div class="stat-label">Users say it sounds indistinguishable from human</div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <div class="section-tag">Core Features</div>
+    <div class="section-h2">Everything your voice<br><em>needs to go global</em></div>
+    <p class="section-lead">From audiobooks to ads, podcasts to games — ElevenLabs powers every use case with the most lifelike AI voices ever built.</p>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon-wrap">🎙️</div>
+        <h3>Voice Cloning</h3>
+        <p>Upload just 1 minute of audio and ElevenLabs clones your voice with uncanny accuracy. Use your own voice in any language, any project, forever.</p>
+        <span class="feat-tag">Instant Setup</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap">🌐</div>
+        <h3>Text to Speech in 32 Languages</h3>
+        <p>Generate broadcast-quality voiceovers in English, Spanish, French, German, Chinese, Hindi, Arabic, Japanese and 24 more — with native-level fluency.</p>
+        <span class="feat-tag">Global Ready</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap">🎬</div>
+        <h3>AI Dubbing</h3>
+        <p>Automatically translate and dub your videos into 29 languages while preserving the original speaker's voice, tone, and emotion. No studio needed.</p>
+        <span class="feat-tag">New Feature</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap">📖</div>
+        <h3>Long-Form Audio</h3>
+        <p>Turn entire books, scripts, and documents into polished audiobooks with chapter detection, consistent narration, and emotional delivery.</p>
+        <span class="feat-tag">Unlimited Length</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap">⚡</div>
+        <h3>Real-Time Voice API</h3>
+        <p>Integrate lifelike speech into your apps, games, and products via a low-latency API. Build voice assistants, interactive characters, and more.</p>
+        <span class="feat-tag">Developer Ready</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap">🎭</div>
+        <h3>1,000+ Voice Library</h3>
+        <p>Choose from a massive library of professional AI voices across ages, accents, and tones — or generate a custom voice from scratch in seconds.</p>
+        <span class="feat-tag">Instant Access</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section" style="background: var(--el-surface); border-top:1px solid var(--el-border); border-bottom:1px solid var(--el-border)">
+  <div class="section-inner">
+    <div class="section-tag">Who It's For</div>
+    <div class="section-h2">Built for every creator,<br><em>every industry</em></div>
+    <p class="section-lead">ElevenLabs powers creators and businesses across every vertical — from solo YouTubers to Fortune 500 media teams.</p>
+    <div class="use-grid">
+      <div class="use-card">
+        <div class="use-card-icon">🎧</div>
+        <h4>Podcasters</h4>
+        <p>Generate AI-narrated intros, ads, and full episodes in your voice — in any language.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">📹</div>
+        <h4>YouTubers</h4>
+        <p>Create voiceovers for videos instantly. Dub your content into Spanish, French, or Hindi to reach global audiences.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">📚</div>
+        <h4>Authors</h4>
+        <p>Convert manuscripts into professional audiobooks narrated by your own cloned voice.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">🎮</div>
+        <h4>Game Developers</h4>
+        <p>Bring characters to life with dynamic, emotionally expressive AI voices via the real-time API.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">📣</div>
+        <h4>Marketers</h4>
+        <p>Produce radio ads, explainer videos, and brand voiceovers at a fraction of studio costs.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">🏢</div>
+        <h4>Enterprises</h4>
+        <p>Scale internal training, customer support IVR, and global product localization with one platform.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">🎓</div>
+        <h4>Educators</h4>
+        <p>Create accessible, multilingual learning content with natural-sounding AI narration.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-card-icon">🤖</div>
+        <h4>AI Developers</h4>
+        <p>Add voice to your LLM apps, agents, and assistants with the ultra-low-latency streaming API.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="section lang-section" id="languages">
+  <div class="section-inner">
+    <div class="lang-grid">
+      <div>
+        <div class="section-tag">Global Languages</div>
+        <div class="section-h2">Speak to the<br><em>whole world</em></div>
+        <p class="section-lead" style="margin-bottom:28px">ElevenLabs supports 32 languages with native-quality pronunciation, natural pacing, and full emotional range. Reach audiences everywhere without re-recording.</p>
+        <div class="lang-list">
+          <div class="lang-pill">🇺🇸 English</div>
+          <div class="lang-pill">🇪🇸 Spanish</div>
+          <div class="lang-pill">🇫🇷 French</div>
+          <div class="lang-pill">🇩🇪 German</div>
+          <div class="lang-pill">🇮🇹 Italian</div>
+          <div class="lang-pill">🇵🇹 Portuguese</div>
+          <div class="lang-pill">🇯🇵 Japanese</div>
+          <div class="lang-pill">🇨🇳 Chinese</div>
+          <div class="lang-pill">🇰🇷 Korean</div>
+          <div class="lang-pill">🇮🇳 Hindi</div>
+          <div class="lang-pill">🇸🇦 Arabic</div>
+          <div class="lang-pill">🇷🇺 Russian</div>
+          <div class="lang-pill">🇳🇱 Dutch</div>
+          <div class="lang-pill">🇵🇱 Polish</div>
+          <div class="lang-pill">🇸🇪 Swedish</div>
+          <div class="lang-pill">🇹🇷 Turkish</div>
+          <div class="lang-pill">+ 16 more</div>
+        </div>
+        <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="btn-xl" style="margin-top:36px;font-size:16px;padding:16px 36px;display:inline-block" target="_blank" rel="noopener">Start Generating in Any Language →</a>
+      </div>
+      <div class="lang-visual">
+        <div class="lang-circle">
+          <div class="lang-badge">🇯🇵 Japanese</div>
+          <div class="lang-badge">🇩🇪 German</div>
+          <div class="lang-badge">🇧🇷 Portuguese</div>
+          <div class="lang-badge">🇸🇦 Arabic</div>
+          <div class="lang-badge">🇮🇳 Hindi</div>
+          <div class="lang-inner">
+            <div class="lang-core">32<br>Languages</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="border-top:1px solid var(--el-border)">
+  <div class="section-inner">
+    <div class="section-tag">What Creators Say</div>
+    <div class="section-h2">Loved by <em>1 million+</em><br>creators worldwide</div>
+    <p class="section-lead">From solo content creators to global media companies — here's what people say after switching to ElevenLabs.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"I cloned my voice in under 5 minutes and now generate a week of podcast content in an hour. My listeners literally can't tell the difference. ElevenLabs is the best investment I've made as a creator."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-orange">MK</div>
+          <div><div class="testi-name">Marcus K.</div><div class="testi-role">Podcast Host · 280K subscribers</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"We use ElevenLabs to dub our YouTube videos into 6 languages. Our international revenue tripled in 3 months. The voice quality is insanely good — feels completely human."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-purple">SJ</div>
+          <div><div class="testi-name">Sophia J.</div><div class="testi-role">YouTube Creator · 1.2M subscribers</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Our game ships with 400+ NPC lines of dialog, all voiced by ElevenLabs. The emotional range is extraordinary — angry, scared, joyful — all believable. Saved us $60k in studio costs."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-teal">DP</div>
+          <div><div class="testi-name">David P.</div><div class="testi-role">Indie Game Developer</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"I turned my 80,000-word novel into an audiobook in one afternoon. Narrated in my own cloned voice. Published on Audible the next day. This technology is genuinely mind-blowing."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-gold">RL</div>
+          <div><div class="testi-name">Rachel L.</div><div class="testi-role">Author &amp; Self-Publisher</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing" style="background:var(--el-surface);border-top:1px solid var(--el-border)">
+  <div class="section-inner">
+    <div class="section-tag">Pricing</div>
+    <div class="section-h2">Start free.<br><em>Scale without limits.</em></div>
+    <p class="section-lead">Every plan includes access to all core features. No hidden fees. No contracts. Cancel anytime.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Free</div>
+        <div class="price-num">$0</div>
+        <div class="price-period">Forever free · No credit card</div>
+        <div class="price-divider"></div>
+        <ul class="price-feats">
+          <li><span class="pcheck">✓</span>10,000 characters/month</li>
+          <li><span class="pcheck">✓</span>Access to all AI voices</li>
+          <li><span class="pcheck">✓</span>3 custom voice clones</li>
+          <li><span class="pcheck">✓</span>Text to speech in 32 languages</li>
+          <li><span class="pcheck">✓</span>Commercial use licence</li>
+        </ul>
+        <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="price-btn" target="_blank" rel="noopener">Get Started Free</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-popular">MOST POPULAR</div>
+        <div class="price-tier">Starter</div>
+        <div class="price-num">$5</div>
+        <div class="price-period">per month · billed monthly</div>
+        <div class="price-divider"></div>
+        <ul class="price-feats">
+          <li><span class="pcheck">✓</span>30,000 characters/month</li>
+          <li><span class="pcheck">✓</span>10 custom voice clones</li>
+          <li><span class="pcheck">✓</span>Voice cloning from 1 min audio</li>
+          <li><span class="pcheck">✓</span>API access included</li>
+          <li><span class="pcheck">✓</span>Commercial licence</li>
+        </ul>
+        <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="price-btn orange" target="_blank" rel="noopener">Start Starter Plan →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Creator</div>
+        <div class="price-num">$22</div>
+        <div class="price-period">per month · billed monthly</div>
+        <div class="price-divider"></div>
+        <ul class="price-feats">
+          <li><span class="pcheck">✓</span>100,000 characters/month</li>
+          <li><span class="pcheck">✓</span>30 custom voice clones</li>
+          <li><span class="pcheck">✓</span>Ultra-high quality audio</li>
+          <li><span class="pcheck">✓</span>AI dubbing access</li>
+          <li><span class="pcheck">✓</span>Priority processing</li>
+        </ul>
+        <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="price-btn" target="_blank" rel="noopener">Go Creator</a>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Pro</div>
+        <div class="price-num">$99</div>
+        <div class="price-period">per month · billed monthly</div>
+        <div class="price-divider"></div>
+        <ul class="price-feats">
+          <li><span class="pcheck">✓</span>500,000 characters/month</li>
+          <li><span class="pcheck">✓</span>160 custom voice clones</li>
+          <li><span class="pcheck">✓</span>Professional dubbing studio</li>
+          <li><span class="pcheck">✓</span>Analytics dashboard</li>
+          <li><span class="pcheck">✓</span>Priority support</li>
+        </ul>
+        <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="price-btn" target="_blank" rel="noopener">Go Pro</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="border-top:1px solid var(--el-border)">
+  <div class="section-inner">
+    <div class="section-tag">FAQ</div>
+    <div class="section-h2">Everything you need<br><em>to know</em></div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What is ElevenLabs and how does it work?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">ElevenLabs is an AI-powered voice synthesis platform that converts text into hyper-realistic speech. It uses deep learning models trained on thousands of hours of human voice data to produce audio that is virtually indistinguishable from a real human. You simply type or paste your text, choose a voice, and generate audio in seconds.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is ElevenLabs free to use?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Yes — ElevenLabs offers a generous free plan with 10,000 characters per month, access to all AI voices, and 3 custom voice clones. No credit card is required to start. Paid plans start at just $5/month for creators needing more volume and advanced features.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How realistic is the AI voice cloning?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">ElevenLabs voice cloning is considered the most realistic available today. With just 1 minute of clean audio, the AI can replicate a person's unique vocal characteristics — including tone, cadence, pitch, and accent — with extraordinary accuracy. In blind tests, users consistently rate ElevenLabs clones as indistinguishable from the original voice.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Which languages does ElevenLabs support?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">ElevenLabs supports 32 languages including English, Spanish, French, German, Italian, Portuguese, Japanese, Chinese (Mandarin), Korean, Hindi, Arabic, Russian, Dutch, Polish, Swedish, Turkish, and more. All languages are supported with native-level pronunciation quality — not robotic machine translation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can I use ElevenLabs audio commercially?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Yes. All ElevenLabs plans — including the free tier — include a commercial use licence. You can use generated audio in YouTube videos, podcasts, ads, audiobooks, games, apps, and any commercial project. Enterprise clients have access to extended licensing and white-label options.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Does ElevenLabs have an API for developers?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Yes. ElevenLabs offers a powerful, developer-friendly API available from the Starter plan and above. It supports real-time streaming synthesis with extremely low latency — ideal for building AI assistants, voice-enabled apps, interactive games, and any product that needs dynamic speech generation at scale.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-glow-1"></div>
+  <div class="final-glow-2"></div>
+  <h2>The future of voice<br><em>starts here.</em></h2>
+  <p>Join 1 million+ creators generating the world's most realistic AI voices — free to start, no credit card needed.</p>
+  <div class="final-btn-group">
+    <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="btn-xl" target="_blank" rel="noopener">
+      Start Creating for Free →
+    </a>
+    <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" class="btn-secondary-lg" target="_blank" rel="noopener">
+      View Pricing Plans
+    </a>
+  </div>
+  <p class="affiliate-disc">Affiliate disclosure: links on this page are affiliate links. We may earn a commission at no extra cost to you.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><div class="footer-brand-dot"></div>ElevenLabs</div>
+      <p class="footer-desc">The world's most advanced AI voice platform. Generate, clone, and dub voices in 32 languages with unmatched realism.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Text to Speech</a>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Voice Cloning</a>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">AI Dubbing</a>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Voice API</a>
+    </div>
+    <div class="footer-col">
+      <h5>Use Cases</h5>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Podcasting</a>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Audiobooks</a>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">YouTube Videos</a>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Game Development</a>
+    </div>
+    <div class="footer-col">
+      <h5>Get Started</h5>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Free Plan</a>
+      <a href="https://try.elevenlabs.io/l2qbqh1bg1mw" target="_blank" rel="noopener">Pricing</a>
+      <a href="https://elevenlabs.io/docs" target="_blank" rel="noopener">Documentation</a>
+      <a href="https://elevenlabs.io/blog" target="_blank" rel="noopener">Blog</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 ElevenLabs. All rights reserved. | Promoted by PalmariniServices</div>
+    <div class="footer-affiliate">Affiliate site — we may earn a commission if you sign up via our links.</div>
+  </div>
+</footer>
+
+<script>
+// Custom cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx+'px'; cursor.style.top = my+'px'; });
+function animRing() { rx += (mx-rx)*0.12; ry += (my-ry)*0.12; ring.style.left = rx+'px'; ring.style.top = ry+'px'; requestAnimationFrame(animRing); }
+animRing();
+document.querySelectorAll('a,.feat-card,.use-card,.testi-card').forEach(el => {
+  el.addEventListener('mouseenter', () => { ring.style.width='60px'; ring.style.height='60px'; });
+  el.addEventListener('mouseleave', () => { ring.style.width='38px'; ring.style.height='38px'; });
+});
+
+// FAQ toggle
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.style.animation = 'fadeUp 0.7s ease both'; e.target.style.opacity = '1'; } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.feat-card, .use-card, .testi-card, .price-card, .stat-num').forEach(el => {
+  el.style.opacity = '0';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
