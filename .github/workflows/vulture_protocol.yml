@@ -2,7 +2,7 @@ name: Vulture Final Protocol
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs every night at midnight
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -26,10 +26,16 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python scripts/generate_daily.py
         
-      - name: Save All Files
+      - name: Run Social Media Post
+        env:
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/social_post.py
+        
+      - name: Commit and Push Changes
         run: |
           git config --local user.email "vulture@brightlane.com"
           git config --local user.name "Vulture-Bot"
           git add .
-          git commit -m "Vulture Daily Update: $(date)" || exit 0
+          git commit -m "Vulture Update: $(date)" || exit 0
           git push
