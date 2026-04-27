@@ -1,0 +1,39 @@
+name: "Vulture Final Protocol"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *' # Fires at 2:00 AM UTC daily
+
+permissions:
+  contents: write
+
+jobs:
+  vulture-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Build Pages (Zero-Cost Descrambler)
+        run: python scripts/generate_daily.py
+
+      - name: Sync and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add pages/*.html
+          
+          # This commit allows the rebase to work cleanly
+          git commit -m "Vulture Daily Refresh: $(date)" || echo "No changes"
+          
+          # Pull latest to avoid divergence
+          git pull --rebase origin main
+          
+          git push origin main
