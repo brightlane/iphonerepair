@@ -1,9 +1,35 @@
-- name: Commit Changes
+name: Vulture Daily Writer
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: pip install openai requests
+        
+      - name: Run Vulture Script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python scripts/generate_daily.py
+        
+      - name: Commit and Push Changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Vulture-Bot"
-          # 'git add .' is safer because it catches the html, mp3, and the updated keywords list
           git add .
-          # This line prevents the error if there happens to be nothing new to save
           git commit -m "Vulture Daily Update: $(date)" || echo "No changes to commit"
           git push
