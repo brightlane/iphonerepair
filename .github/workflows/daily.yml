@@ -1,4 +1,4 @@
-name: Vulture Daily Writer
+name: Vulture Final Protocol
 on:
   workflow_dispatch:
   schedule:
@@ -26,12 +26,11 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python scripts/generate_daily.py
         
-      - name: Commit and Push Changes
+      - name: Save All Files
         run: |
-          git config --local user.email "action@github.com"
+          git config --local user.email "vulture@brightlane.com"
           git config --local user.name "Vulture-Bot"
-          # This is the key: 'git add .' adds the HTML, MP3, and Keyword updates
+          # This is the ONLY way to fix 'pathspec' errors
           git add .
-          # The '|| exit 0' ensures that if no changes were made, the script doesn't crash
           git commit -m "Vulture Daily Update: $(date)" || exit 0
           git push
