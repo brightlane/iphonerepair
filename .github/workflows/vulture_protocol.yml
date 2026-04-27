@@ -1,0 +1,35 @@
+name: Vulture Final Protocol
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Runs every night at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: pip install openai requests
+        
+      - name: Run Vulture Script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python scripts/generate_daily.py
+        
+      - name: Save All Files
+        run: |
+          git config --local user.email "vulture@brightlane.com"
+          git config --local user.name "Vulture-Bot"
+          git add .
+          git commit -m "Vulture Daily Update: $(date)" || exit 0
+          git push
