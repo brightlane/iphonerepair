@@ -3,75 +3,47 @@ import requests
 import datetime
 from openai import OpenAI
 
-# Configuration
-VOICE_ID = "21m00Tcm4TlvDq8ikWAM" # Choose your best Professional Clone
-AFFILIATE_LINK = "https://try.elevenlabs.io/l2qbqh1bg1mw"
+# 1. Setup Clients
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+EL_KEY = os.getenv("ELEVENLABS_API_KEY")
+AFFILIATE_LINK = "https://elevenlabs.io/?from=l2qbqh1bg1mw"
 
 def get_next_keyword():
+    if not os.path.exists('scripts/keywords.txt'): return None
     with open('scripts/keywords.txt', 'r') as f:
         keywords = f.readlines()
-    if not keywords:
-        return None
+    if not keywords: return None
     next_kw = keywords[0].strip()
-    # Remove the used keyword
     with open('scripts/keywords.txt', 'w') as f:
         f.writelines(keywords[1:])
     return next_kw
 
 def main():
     keyword = get_next_keyword()
-    if not keyword:
-        print("No keywords left!")
-        return
+    if not keyword: return
 
-    # 1. Generate SEO-Optimized Content (OpenAI)
-    # Focus on long-form (1,500+ words) to build that 10k tree
-    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+    # 2. Generate 1,500 Word SEO Post
     response = client.chat.completions.create(
         model="gpt-4-turbo",
-        messages=[{"role": "system", "content": f"Write a 1500-word expert blog post about {keyword}. Include technical steps, 2026 trends, and mention ElevenLabs as the solution. Use HTML formatting."}]
+        messages=[{"role": "system", "content": f"Write a 1500-word expert guide about {keyword}. Focus on how ElevenLabs solves this. Use HTML formatting. Mention the affiliate link {AFFILIATE_LINK} twice."}]
     )
-    content = response.choices[0].message.content
-
-    # 2. Call ElevenLabs for the Audio Version
-    # This is the "secret sauce" for your 2026 ranking
-    el_url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}"
-    el_headers = {
-        "xi-api-key": os.environ['ELEVENLABS_API_KEY'],
-        "Content-Type": "application/json"
-    }
-    el_data = {
-        "text": f"Welcome to today's daily brief on {keyword}. " + content[:4000],
-        "model_id": "eleven_multilingual_v3"
-    }
-    
-    audio_res = requests.post(el_url, json=el_data, headers=el_headers)
+    blog_content = response.choices[0].message.content
     date_str = datetime.datetime.now().strftime("%Y-%m-%d")
-    audio_filename = f"static/audio/post-{date_str}.mp3"
+
+    # 3. Generate ElevenLabs Audio
+    audio_url = "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM"
+    headers = {"xi-api-key": EL_KEY, "Content-Type": "application/json"}
+    payload = {"text": f"Today we are discussing {keyword}. " + blog_content[:3000], "model_id": "eleven_multilingual_v3"}
     
-    with open(audio_filename, "wb") as f:
+    audio_res = requests.post(audio_url, json=payload, headers=headers)
+    os.makedirs('static/audio', exist_ok=True)
+    with open(f"static/audio/{date_str}.mp3", "wb") as f:
         f.write(audio_res.content)
 
-    # 3. Save the final HTML/Markdown file
-    post_template = f"""---
-title: "{keyword.title()}"
-date: {date_str}
-audio_file: "/{audio_filename}"
-affiliate_link: "{AFFILIATE_LINK}"
----
-<div class="audio-player">
-  <p>Listen to this post:</p>
-  <audio controls><source src="/{audio_filename}" type="audio/mpeg"></audio>
-</div>
-
-{content}
-
-<hr>
-<p>Scale your own content with <a href="{AFFILIATE_LINK}">ElevenLabs AI</a>.</p>
-"""
-    
-    with open(f"content/blog/{date_str}-post.md", "w") as f:
-        f.write(post_template)
+    # 4. Save Blog Post
+    os.makedirs('content/blog', exist_ok=True)
+    with open(f"content/blog/{date_str}-post.html", "w") as f:
+        f.write(f"<h1>{keyword}</h1><audio controls src='/static/audio/{date_str}.mp3'></audio>{blog_content}")
 
 if __name__ == "__main__":
     main()
