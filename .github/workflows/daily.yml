@@ -30,6 +30,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Vulture-Bot"
+          # This 'git add .' is the fix—it grabs all file types
           git add .
           git commit -m "Vulture Daily Update: $(date)" || echo "No changes to commit"
           git push
